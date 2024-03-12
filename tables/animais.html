@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script type="module" src="script.js"></script>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <title>Document</title>
+</head>
+<body class="min-h-[100vh] flex flex-col">
+  <div id="app" class="bg-slate-50 flex-1 p-8 flex flex-col">
+    <header class="flex items-center gap-3">
+      <img src="/assets/penguin.svg" alt="logo" class="w-10 h-10">
+      <h1 class="text-2xl font-medium">Fundação Pinguim</h1>
+    </header>
+    <main class="mt-8 flex-1 flex gap-4">
+      <aside class="bg-cyan-200/40 rounded-2xl p-4 min-w-64">
+        <nav class="flex flex-col space-y-3">
+          <a href="/index.html" class="bg-sky-200 py-1 w-full rounded-xl text-center">Tratamentos</a>
+          <a href="/tables/animais.html" class="bg-sky-200 py-1 w-full rounded-xl text-center">Animais</a>
+          <a href="/tables/secoes.html" class="bg-sky-200 py-1 w-full rounded-xl text-center">Seções</a>
+          <a href="/tables/tratadores.html" class="bg-sky-200 py-1 w-full rounded-xl text-center">Tratadores</a>
+        </nav>
+      </aside>
+      <section class="bg-cyan-200/40 p-4 flex-1 overflow-auto">
+        <div class="overflow-x-auto">
+          <table class="w-full">
+            <thead class="bg-cyan-700/50">
+              <tr>
+                <th class="border border-x-white text-left pl-4 border-y-cyan-800/40 py-1">Nome</th>
+                <th class="border border-x-white text-left pl-4 border-y-cyan-800/40 py-1">Espécie</th>
+                <th class="border border-x-white text-left pl-4 border-y-cyan-800/40 py-1">Idade</th>
+                <th class="border border-x-white text-left pl-4 border-y-cyan-800/40 py-1">Status</th>
+              </tr>
+            </thead>
+            <tbody class="bg-white mt-4">
+              <tr>
+                <td class="border border-cyan-800/40 py-1 pl-4">Teste</td>
+                <td class="border border-cyan-800/40 py-1 pl-4">Teste</td>
+                <td class="border border-cyan-800/40 py-1 pl-4">Teste</td>
+                <td class="border border-cyan-800/40 py-1 pl-4">Teste</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </section>
+    </main>
+  </div>
+</body>
+</html>
