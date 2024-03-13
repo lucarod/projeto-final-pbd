@@ -1,14 +1,18 @@
 export async function createAnimal(animalData) {
-    const response = await fetch('http://localhost:3000/animais', {
-        method: 'POST',
-        mode: 'cors',
-        headers: {
-            'Content-type': 'application/json'
-        },
-        body: JSON.stringify(animalData)
-    });
-
-    return response.json();
+    try {
+        const response = await fetch('http://localhost:3000/animais', {
+            method: 'POST',
+            mode: 'cors',
+            headers: {
+                'Content-type': 'application/json'
+            },
+            body: JSON.stringify(animalData)
+        });
+    
+        return response.json();
+    } catch {
+        console.log('erro no create animal')
+    }
 }
 
 export async function createTratamento(treatmentData) {

@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <script type="module" src="script.js"></script>
+  <script type="module" src="/script.js"></script>
   <script src="https://cdn.tailwindcss.com"></script>
   <title>Document</title>
 </head>
@@ -25,7 +25,7 @@
           <a href="/tables/tratadores.html" class="bg-sky-200 py-1 w-full rounded-xl text-center">Tratadores</a>
         </nav>
       </aside>
-      <section class="bg-cyan-200/40 p-4 flex-1 overflow-auto rounded-2xl">
+      <section class="bg-cyan-200/40 p-4 flex-1 overflow-auto rounded-2xl" @vue:mounted="getAnimais">
         <div class="overflow-x-auto">
           <table class="w-full">
             <thead class="bg-cyan-700/50">

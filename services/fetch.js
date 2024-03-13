@@ -1,4 +1,8 @@
 export async function fetchAnimais() {
-    const response = await fetch('http://localhost:3000/animais');
-    return response.json();
+    try {
+        const response = await fetch('http://localhost:3000/animais');
+        return response.json();
+    } catch {
+        console.log('erro no fetch animais')
+    }
 }
