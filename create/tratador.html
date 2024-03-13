@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <script type="module" src="script.js"></script>
+  <script type="module" src="/script.js"></script>
   <script src="https://cdn.tailwindcss.com"></script>
   <title>Document</title>
 </head>
@@ -14,7 +14,6 @@
         <img src="/assets/penguin.svg" alt="logo" class="w-10 h-10">
         <h1 class="text-2xl font-medium">Fundação Pinguim</h1>
       </div>
-      <a href="/create/secao.html" class="bg-sky-500 text-white py-3 px-6 rounded-xl font-medium">Nova Seção</a>
     </header>
     <main class="mt-8 flex-1 flex gap-4">
       <aside class="bg-cyan-200/40 rounded-2xl p-4 min-w-64">
@@ -26,24 +25,34 @@
         </nav>
       </aside>
       <section class="bg-cyan-200/40 p-4 flex-1 overflow-auto rounded-2xl">
-        <div class="overflow-x-auto">
-          <table class="w-full">
-            <thead class="bg-cyan-700/50">
-              <tr>
-                <th class="border border-x-white text-left pl-4 border-y-cyan-800/40 py-1">Nome</th>
-                <th class="border border-x-white text-left pl-4 border-y-cyan-800/40 py-1">Descrição</th>
-              </tr>
-            </thead>
-            <tbody class="bg-white mt-4">
-              <tr>
-                <td class="border border-cyan-800/40 py-1 pl-4">Teste</td>
-                <td class="border border-cyan-800/40 py-1 pl-4">Teste</td>
-              </tr>
-            </tbody>
-          </table>
-        </div>
+        <h2 class="text-xl font-medium">Novo Tratador</h2>
+        <form class="space-y-8 mt-4">
+          <button type="submit" disabled class="hidden" aria-hidden="true"></button>
+          <fieldset class="flex flex-col">
+            <label for="name">Nome:</label>
+            <input type="text" name="name" id="name" class="max-w-64 mt-2 p-1">
+          </fieldset>
+          <fieldset class="flex flex-col">
+            <label for="cpf">CPF:</label>
+            <input type="text" name="cpf" id="cpf" class="max-w-64 mt-2 p-1">
+          </fieldset>
+          <fieldset class="flex flex-col">
+            <label for="date">Data de Entrada:</label>
+            <input type="date" class="date max-w-64 mt-2 p-1">
+          </fieldset>
+          <fieldset class="flex flex-col">
+            <label for="date">Data de Saída:</label>
+            <input type="date" class="date max-w-64 mt-2 p-1">
+          </fieldset>
+          <button class="bg-cyan-400 p-3 rounded-xl text-white font-medium min-w-40">Criar</button>
+        </form>
       </section>
     </main>
   </div>
+
+  <script>
+    const today = new Date().toISOString().substr(0, 10);
+    document.querySelector(".date").value = today;
+  </script>
 </body>
 </html>
