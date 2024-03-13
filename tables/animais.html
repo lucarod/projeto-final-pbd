@@ -37,11 +37,11 @@
               </tr>
             </thead>
             <tbody class="bg-white mt-4">
-              <tr>
-                <td class="border border-cyan-800/40 py-1 pl-4">Teste</td>
-                <td class="border border-cyan-800/40 py-1 pl-4">Teste</td>
-                <td class="border border-cyan-800/40 py-1 pl-4">Teste</td>
-                <td class="border border-cyan-800/40 py-1 pl-4">Teste</td>
+              <tr v-for="animal in animais" :key="animal.id">
+                <td class="border border-cyan-800/40 py-1 pl-4">{{animal.nome}}</td>
+                <td class="border border-cyan-800/40 py-1 pl-4">{{animal.species_id}}</td>
+                <td class="border border-cyan-800/40 py-1 pl-4">{{animal.idade}}</td>
+                <td class="border border-cyan-800/40 py-1 pl-4">{{animal.status_saude}}</td>
               </tr>
             </tbody>
           </table>

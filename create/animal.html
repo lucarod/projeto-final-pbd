@@ -26,7 +26,7 @@
       </aside>
       <section class="bg-cyan-200/40 p-4 flex-1 overflow-auto rounded-2xl">
         <h2 class="text-xl font-medium">Novo Animal</h2>
-        <form class="space-y-8 mt-4">
+        <form class="space-y-8 mt-4" @submit.prevent="handleSubmitAnimal">
           <button type="submit" disabled class="hidden" aria-hidden="true"></button>
           <fieldset class="flex flex-col">
             <label for="name">Nome:</label>
@@ -54,7 +54,9 @@
           <fieldset class="flex flex-col">
             <label for="status">Status de saúde:</label>
             <select name="status" id="status" class="max-w-64 mt-2 p-1">
-              <option value="teste">teste</option>
+              <option value="FERIDO">Ferido</option>
+              <option value="DOENTE">Doente</option>
+              <option value="SAUDAVEL">Saudável</option>
             </select>
           </fieldset>
           <button class="bg-cyan-400 p-3 rounded-xl text-white font-medium min-w-40">Criar</button>
